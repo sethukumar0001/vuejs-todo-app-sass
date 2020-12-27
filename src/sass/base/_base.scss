@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: color 0.5s, background-color 0.5s, border-color 0.5s,
+    box-shadow 0.5s;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+#app {
+  position: relative;
+}
+
+.layout {
+  min-height: 100vh;
+  background-color: $color-dark-blue-1;
+  overflow: hidden;
+  padding: 7rem $padding-side 5.2rem;
+
+  @include respond(mobile) {
+    padding: 4.3rem $padding-side 7.2rem;
+  }
+
+  &.light {
+    background-color: $color-light-grey-1;
+  }
+}
+
+.radio {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 1px solid $color-dark-grey-5;
+  margin-right: 2.4rem;
+  position: relative;
+
+  @include respond(mobile) {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1.2rem;
+  }
+}
+
+.light .radio {
+  border-color: #d1d2da;
+}

@@ -1,0 +1,57 @@
+.input-wrapper {
+  background-color: $color-dark-blue-2;
+  border-radius: 0.5rem;
+  padding: 0 2.4rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  box-shadow: $box-shadow;
+
+  @include respond(mobile) {
+    padding: 0 2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__button {
+    font: inherit;
+    color: $color-light-grey-4;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-left: 2rem;
+    cursor: pointer;
+  }
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: $color-light-grey-4;
+  letter-spacing: -0.25px;
+  padding: 2.3rem 0;
+  flex: 1;
+
+  @include respond(mobile) {
+    padding: 1.8rem 0;
+    letter-spacing: -0.17px;
+  }
+
+  &::placeholder {
+    color: $color-dark-grey-3;
+  }
+}
+
+.light .input-wrapper {
+  background-color: #fff;
+  box-shadow: $box-shadow-light;
+}
+
+.light .input {
+  color: $color-dark-grey-5;
+
+  &::placeholder {
+    color: $color-dark-grey-1;
+  }
+}
